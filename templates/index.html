@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+{% block title %}Ashish AI{% endblock %}
+
+{% block content %}
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 pt-6">
+
+    <div class="max-w-7xl mx-auto">
+
+        <div class="glass rounded-2xl px-6 py-4 flex items-center justify-between">
+
+            <div class="flex items-center gap-3">
+
+                <div class="w-10 h-10 rounded-xl glass flex items-center justify-center">
+                    ✦
+                </div>
+
+                <div>
+                    <h2 class="font-semibold text-white">
+                        Ashish AI
+                    </h2>
+
+                    <p class="text-xs text-slate-400">
+                        Digital AI Clone
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+
+                <a href="#chat-section" class="hover:text-white transition">
+                    Chat
+                </a>
+
+                <a href="https://ashishgolchha.github.io" target="_blank" class="hover:text-white transition">
+                    Portfolio
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="reveal relative min-h-screen flex items-center justify-center px-6 pt-32">
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+        <!-- LEFT -->
+        <div>
+
+            <div class="glass inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8">
+                <div class="w-2 h-2 bg-indigo-300 rounded-full"></div>
+                <span class="text-sm text-slate-300 flex items-center gap-2">
+
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+
+                    DIGITAL AI CLONE OF ASHISH GOLCHHA
+
+                </span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight">
+                Hello, I'm
+                <span class="bg-gradient-to-r from-indigo-200 via-indigo-300 to-sky-200 bg-clip-text text-transparent">
+
+                    Ashish's AI Clone
+
+                </span>
+            </h1>
+
+            <p class="mt-8 text-slate-400 text-lg leading-relaxed max-w-xl">
+                Ask me anything about Ashish Golchha — his projects,
+                technical skills, experience, backend engineering,
+                AI systems, and professional journey.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+
+                <a href="#chat-section"
+                    class="glass premium-btn px-8 py-4 rounded-2xl text-white hover:scale-105 transition duration-300 shadow-glow">
+
+                    Start Conversation
+                </a>
+
+                <a href="https://ashishgolchha.github.io" target="_blank"
+                    class="border border-white/10 px-8 py-4 rounded-2xl text-slate-300 hover:bg-white/5 transition">
+
+                    View Portfolio
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="relative flex justify-center">
+
+            <div class="hero-glow"></div>
+
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop"
+                class="hero-image relative z-10 w-full max-w-xl rounded-[40px] object-cover border border-white/10 shadow-2xl">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MINI SECTION -->
+<section class="reveal px-6 pb-20">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="grid md:grid-cols-4 gap-6">
+
+            <div class="glass feature-card rounded-3xl p-6">
+                <h3 class="font-semibold text-lg">Backend Engineering</h3>
+                <p class="text-slate-400 mt-3 text-sm">
+                    Scalable APIs, authentication systems, and clean architecture.
+                </p>
+            </div>
+
+            <div class="glass feature-card rounded-3xl p-6">
+                <h3 class="font-semibold text-lg">AI Systems</h3>
+                <p class="text-slate-400 mt-3 text-sm">
+                    AI-powered products using Gemini and intelligent workflows.
+                </p>
+            </div>
+
+            <div class="glass feature-card rounded-3xl p-6">
+                <h3 class="font-semibold text-lg">Full-Stack Projects</h3>
+                <p class="text-slate-400 mt-3 text-sm">
+                    Production-ready applications with modern UI and backend systems.
+                </p>
+            </div>
+
+            <div class="glass feature-card rounded-3xl p-6">
+                <h3 class="font-semibold text-lg">Problem Solving</h3>
+                <p class="text-slate-400 mt-3 text-sm">
+                    Focused on scalable systems and practical engineering solutions.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CHAT -->
+<section id="chat-section" class="reveal px-6 pb-32">
+
+    <div class="max-w-5xl mx-auto">
+
+        <div class="text-center mb-14">
+            <h2 class="text-4xl md:text-5xl font-bold">
+                Chat With Ashish AI
+            </h2>
+
+            <p class="text-slate-400 mt-4">
+                Ask anything about Ashish's projects, skills, experience, or technical work.
+            </p>
+        </div>
+
+        <!-- CHAT CONTAINER -->
+        <div class="glass chat-depth rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
+
+            <!-- CHAT BOX -->
+            <div id="chat-box" class="h-[650px] overflow-y-auto px-6 py-8 space-y-6">
+
+                <!-- DEFAULT AI MESSAGE -->
+                <div class="flex items-start gap-4 message-enter">
+
+                    <div class="w-12 h-12 rounded-2xl glass flex items-center justify-center text-xl shrink-0">
+                        ✦
+                    </div>
+
+                    <div class="glass rounded-3xl rounded-tl-sm px-6 py-5 max-w-2xl">
+
+                        <p class="text-slate-200 leading-relaxed">
+                            Hello! I'm Ashish's AI clone.
+                            Feel free to ask me anything about his projects,
+                            skills, experience, education, or professional journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- INPUT -->
+            <div class="border-t border-white/10 p-5">
+
+                <div class="flex items-center gap-4">
+
+                    <div class="relative flex-1">
+
+                        <div class="absolute inset-0 rounded-2xl
+        bg-gradient-to-r from-indigo-500/10 to-sky-500/10 blur-xl">
+                        </div>
+
+                        <input id="user-input" type="text" placeholder="Ask anything about Ashish..." class="relative w-full bg-white/5 border border-white/10
+            rounded-2xl px-6 py-5 outline-none text-white
+            placeholder:text-slate-500 focus:border-indigo-300/20
+            transition" onkeydown="handleEnter(event)">
+
+                    </div>
+
+                    <!-- MIC -->
+                    <button id="micBtn" onclick="startMic()" class="w-14 h-14 rounded-2xl glass hover:scale-105
+        transition text-xl relative overflow-hidden">
+
+                        🎤
+
+                    </button>
+
+                    <!-- SEND -->
+                    <button onclick="sendMessage()" class="w-14 h-14 rounded-2xl
+        bg-gradient-to-br from-indigo-300/20 to-sky-300/10
+        border border-white/10 hover:scale-105 transition text-xl">
+
+                        ➜
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+{% endblock %}
