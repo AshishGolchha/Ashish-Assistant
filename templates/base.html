@@ -488,6 +488,209 @@
       }
 
     }
+
+    /* ================= VOICE POPUP ================= */
+
+    #voice-popup {
+      padding: 2rem;
+    }
+
+    .voice-popup-backdrop {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 42%,
+          rgba(135, 58, 255, .30) 0,
+          rgba(72, 24, 172, .24) 26%,
+          rgba(21, 11, 78, .88) 58%,
+          rgba(8, 5, 34, .98) 100%),
+        linear-gradient(180deg,
+          rgba(12, 7, 46, .90) 0%,
+          rgba(5, 4, 24, .98) 100%);
+      backdrop-filter: blur(24px) saturate(125%);
+    }
+
+    .voice-orb-stage {
+      position: relative;
+      padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 4vw, 2rem) 0;
+      isolation: isolate;
+    }
+
+    .voice-orb-stage::before {
+      content: "";
+      position: absolute;
+      inset: -8% -12% 8%;
+      z-index: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      background:
+        radial-gradient(circle,
+          rgba(108, 47, 255, .28) 0 18%,
+          rgba(78, 223, 255, .14) 28%,
+          rgba(39, 13, 114, .08) 52%,
+          transparent 74%);
+      filter: blur(72px);
+      opacity: .94;
+    }
+
+    #voice-transcript {
+      margin-top: 1.5rem;
+      color: rgba(233, 236, 255, .92);
+      letter-spacing: .09em;
+      text-shadow: 0 0 18px rgba(116, 220, 255, .12);
+    }
+
+    /* ================= AI ORB ================= */
+
+    .ai-orb-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 0;
+      width: min(96vw, 560px);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      background:
+        radial-gradient(circle at 50% 50%,
+          rgba(255, 255, 255, .12) 0 6%,
+          rgba(104, 231, 255, .14) 18%,
+          rgba(244, 128, 255, .14) 34%,
+          rgba(113, 56, 255, .12) 50%,
+          transparent 74%);
+      filter: blur(62px);
+      opacity: .88;
+      animation: glowPulse 8s ease-in-out infinite;
+    }
+
+    .ai-orb {
+      position: relative;
+      z-index: 1;
+      width: min(84vw, 460px);
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      overflow: hidden;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 50% 44%,
+          rgba(82, 28, 182, .20) 0 22%,
+          rgba(56, 16, 148, .34) 40%,
+          rgba(28, 10, 96, .72) 68%,
+          rgba(11, 5, 40, .96) 100%);
+      box-shadow:
+        inset 0 22px 36px rgba(255, 255, 255, .04),
+        inset 0 -34px 58px rgba(5, 2, 24, .62),
+        0 20px 80px rgba(6, 2, 34, .44);
+      animation: orbFloat 10s ease-in-out infinite;
+      transform: translateZ(0);
+    }
+
+    .ai-orb::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      border-radius: 50%;
+      pointer-events: none;
+      background:
+        radial-gradient(120% 82% at 50% 10%,
+          rgba(255, 222, 249, .18) 0 18%,
+          rgba(255, 255, 255, .08) 22%,
+          transparent 54%),
+        radial-gradient(circle at 18% 18%,
+          rgba(255, 255, 255, .10) 0 4%,
+          transparent 12%),
+        radial-gradient(circle at 50% 50%,
+          transparent 66%,
+          rgba(255, 255, 255, .03) 76%,
+          rgba(255, 255, 255, 0) 82%);
+      mix-blend-mode: screen;
+      opacity: .78;
+    }
+
+    .orb-illustration {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .orb-ring {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .orb-ring::before,
+    .orb-ring::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .orb-ring::before {
+      inset: 6px;
+      border: 1px solid rgba(255, 255, 255, .08);
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, .02),
+        0 0 0 1px rgba(255, 255, 255, .04);
+    }
+
+    .orb-ring::after {
+      inset: -3px;
+      background:
+        conic-gradient(from 205deg,
+          rgba(92, 244, 255, .92) 0deg,
+          rgba(194, 251, 255, .42) 60deg,
+          rgba(255, 228, 248, .88) 132deg,
+          rgba(238, 143, 255, .82) 208deg,
+          rgba(112, 56, 255, .40) 286deg,
+          rgba(92, 244, 255, .92) 360deg);
+      -webkit-mask:
+        radial-gradient(farthest-side,
+          transparent calc(100% - 20px),
+          #000 calc(100% - 12px),
+          transparent calc(100% - 4px));
+      mask:
+        radial-gradient(farthest-side,
+          transparent calc(100% - 20px),
+          #000 calc(100% - 12px),
+          transparent calc(100% - 4px));
+      filter: blur(10px);
+      opacity: .96;
+    }
+
+    @keyframes orbFloat {
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0);
+      }
+
+      50% {
+        transform: translate3d(0, -8px, 0);
+      }
+    }
+
+    @keyframes glowPulse {
+      0%,
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .78;
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.03);
+        opacity: .92;
+      }
+    }
   </style>
 </head>
 

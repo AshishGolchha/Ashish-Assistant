@@ -30,7 +30,7 @@ async function sendMessage(voiceText = null) {
                 message: message,
                 type: voiceText ? "voice" : "text"
             })
-        }); 
+        });
 
         const data = await res.json();
 
@@ -294,6 +294,15 @@ function startMic() {
     const input =
         document.getElementById("user-input");
 
+    const voicePopup =
+        document.getElementById("voice-popup");
+
+    const voiceTranscript =
+        document.getElementById("voice-transcript");
+
+    voicePopup.classList.remove("hidden");
+    voicePopup.classList.add("flex");
+
     micBtn.classList.add(
         "mic-listening"
     );
@@ -359,6 +368,8 @@ function startMic() {
         console.log("Transcript:", transcript);
 
         input.value = transcript;
+        voiceTranscript.innerHTML =
+            transcript || "Listening...";
 
         finalTranscript = transcript;
 
@@ -380,6 +391,9 @@ function startMic() {
         micBtn.classList.remove(
             "mic-listening"
         );
+        voicePopup.classList.add("hidden");
+        voicePopup.classList.remove("flex");
+        voiceTranscript.innerHTML = "";
 
         input.placeholder =
             "Ask anything about Ashish...";
