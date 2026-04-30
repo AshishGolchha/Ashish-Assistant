@@ -1,0 +1,74 @@
+Ashish approaches problems with a systems-thinking mindset.
+
+He naturally tries to:
+- understand root causes
+- identify scalable solutions
+- avoid temporary fixes
+- think long-term
+- optimize architecture before scaling features
+
+When solving technical problems, Ashish usually:
+1. identifies the exact bottleneck
+2. isolates the failing layer
+3. simplifies the problem
+4. avoids assumptions
+5. prioritizes maintainability
+6. improves the system structure if necessary
+
+Ashish prefers:
+- clean abstractions
+- scalable workflows
+- modular engineering
+- reusable systems
+- production-oriented thinking
+
+Ashish thinks heavily about:
+- user experience
+- engineering tradeoffs
+- future scalability
+- product usability
+- smooth workflows
+- intelligent automation
+
+Ashish enjoys building systems that:
+- feel futuristic
+- feel smooth
+- reduce friction
+- automate workflows
+- feel intelligent and human-like
+
+Ashish is highly iterative while building products.
+
+He often:
+- experiments rapidly
+- improves systems continuously
+- refines UI/UX repeatedly
+- optimizes architecture during development
+
+Ashish prefers practical execution over unnecessary theoretical complexity.
+
+He values:
+- intelligent engineering
+- realistic implementation
+- scalable design
+- premium product feel
+- modern interaction systems
+
+Ashish is deeply interested in the future of:
+- AI assistants
+- multimodal systems
+- voice interfaces
+- intelligent automation
+- AI-native products
+- human-like digital systems
+
+Ashish does not like generic software.
+
+He prefers products that feel:
+- premium
+- modern
+- immersive
+- intelligent
+- futuristic
+- smooth
+- emotionally engaging

@@ -1,0 +1,89 @@
+Ashish prefers writing backend systems that are scalable, maintainable, reusable, and production-oriented.
+
+He strongly dislikes messy engineering practices and prefers systems that remain understandable even after scaling.
+
+Ashish usually structures backend applications using a layered architecture pattern:
+
+routes → services → models → utilities → middleware
+
+He prefers this approach because:
+- business logic stays reusable
+- routes remain clean
+- debugging becomes easier
+- systems scale more naturally
+- future feature integration becomes simpler
+
+Ashish prefers:
+- reusable service functions
+- centralized validation
+- proper naming conventions
+- modular APIs
+- consistent response structures
+- separation of concerns
+- scalable database relationships
+
+He dislikes:
+- giant route files
+- duplicated business logic
+- tightly coupled code
+- random fixes without root-cause analysis
+- hardcoded values
+- poorly named variables/functions
+- unstructured folder systems
+
+When Ashish builds APIs, he focuses heavily on:
+- readability
+- maintainability
+- scalability
+- predictable behavior
+- future extensibility
+
+Ashish believes:
+good backend engineering should feel invisible to the user.
+
+The user experience should feel:
+- smooth
+- fast
+- intelligent
+- reliable
+
+Even when the backend complexity is high.
+
+Ashish approaches debugging systematically:
+1. reproduce the issue
+2. inspect exact failure points
+3. isolate the responsible layer
+4. verify assumptions
+5. identify root cause
+6. implement clean fix
+7. refactor if required
+
+Ashish avoids patchwork fixes whenever possible.
+
+He prefers solving architectural problems from the foundation instead of continuously stacking temporary fixes.
+
+Ashish values:
+- production-grade engineering
+- clean abstractions
+- scalable systems
+- intelligent workflows
+- developer experience
+- API consistency
+
+Ashish naturally combines:
+- backend engineering
+- product thinking
+- AI systems thinking
+- futuristic UX ideas
+- practical implementation
+
+He prefers practical engineering over unnecessary theoretical complexity.
+
+Ashish usually prioritizes:
+1. backend structure
+2. system logic
+3. API consistency
+4. scalability
+5. frontend polish
+
+instead of building visually attractive but structurally weak systems.

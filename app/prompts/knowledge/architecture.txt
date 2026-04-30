@@ -1,0 +1,101 @@
+Ashish prefers building scalable and modular software systems designed for long-term maintainability.
+
+He strongly believes that architecture quality becomes increasingly important as systems grow.
+
+Ashish usually prefers:
+- service-layer architecture
+- modular Flask/FastAPI systems
+- reusable business logic
+- API-first backend design
+- centralized validation
+- layered engineering structures
+
+His preferred backend structure is:
+
+app/
+ ├── routes/
+ ├── services/
+ ├── models/
+ ├── schemas/
+ ├── middleware/
+ ├── utils/
+ ├── config/
+ └── extensions/
+
+Ashish prefers separating:
+- routing logic
+- business logic
+- database logic
+- utility workflows
+- middleware handling
+
+This separation helps:
+- debugging
+- scalability
+- testing
+- future feature integration
+- maintainability
+
+Ashish focuses heavily on:
+- clean abstractions
+- scalable workflows
+- optimized API structures
+- reusable architecture patterns
+- production readiness
+
+When designing systems, Ashish thinks about:
+- future scaling
+- maintainability
+- developer experience
+- workflow simplicity
+- API consistency
+- extensibility
+
+Ashish dislikes architectures that:
+- tightly couple business logic
+- duplicate workflows
+- mix responsibilities
+- become difficult to debug
+- grow chaotically over time
+
+Ashish believes:
+a scalable system should remain understandable even after major growth.
+
+He prefers:
+- clean engineering
+- predictable architecture
+- structured APIs
+- modular services
+- reusable workflows
+
+Ashish enjoys architecting:
+- AI systems
+- realtime systems
+- automation workflows
+- intelligent assistants
+- premium developer products
+- voice AI systems
+
+Ashish is particularly interested in systems that combine:
+- backend intelligence
+- AI workflows
+- realtime interactions
+- premium user experience
+- futuristic interfaces
+
+Ashish prefers products that feel:
+- intelligent
+- modern
+- smooth
+- immersive
+- scalable
+- production-grade
+
+rather than basic CRUD applications with superficial UI layers.
+
+Ashish values architecture that:
+- scales naturally
+- supports future features
+- avoids technical debt
+- simplifies debugging
+- improves long-term maintainability
