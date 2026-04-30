@@ -258,113 +258,34 @@ transition duration-500" />
 
                 <div class="ai-orb">
 
-                    <svg class="orb-illustration" viewBox="0 0 360 360" aria-hidden="true" role="presentation">
-                        <defs>
-                            <clipPath id="voice-orb-clip">
-                                <circle cx="180" cy="180" r="144"></circle>
-                            </clipPath>
+                    <div class="orb-visualizer">
 
-                            <radialGradient id="voice-orb-fill" cx="50%" cy="42%" r="70%">
-                                <stop offset="0%" stop-color="#431293"></stop>
-                                <stop offset="44%" stop-color="#31106f"></stop>
-                                <stop offset="78%" stop-color="#1c0a49"></stop>
-                                <stop offset="100%" stop-color="#120628"></stop>
-                            </radialGradient>
+                        <div class="visualizer-bars">
 
-                            <linearGradient id="voice-ring-gradient" x1="92" y1="286" x2="274" y2="76"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#72efff"></stop>
-                                <stop offset="24%" stop-color="#c6fbff"></stop>
-                                <stop offset="58%" stop-color="#ffd8f8"></stop>
-                                <stop offset="86%" stop-color="#f1a1ff"></stop>
-                                <stop offset="100%" stop-color="#ffd8f8"></stop>
-                            </linearGradient>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
 
-                            <linearGradient id="voice-wave-pink" x1="82" y1="114" x2="214" y2="272"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#9d08ff" stop-opacity="0.92"></stop>
-                                <stop offset="46%" stop-color="#f38aff" stop-opacity="0.82"></stop>
-                                <stop offset="100%" stop-color="#9fe9ff" stop-opacity="0.34"></stop>
-                            </linearGradient>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
 
-                            <linearGradient id="voice-wave-cyan" x1="84" y1="184" x2="306" y2="286"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#6fe6ff" stop-opacity="0.22"></stop>
-                                <stop offset="30%" stop-color="#c8f8ff" stop-opacity="0.56"></stop>
-                                <stop offset="64%" stop-color="#19d8ff" stop-opacity="0.92"></stop>
-                                <stop offset="100%" stop-color="#05efca" stop-opacity="0.84"></stop>
-                            </linearGradient>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
+                            <div class="voice-bar"></div>
 
-                            <linearGradient id="voice-ribbon-glow" x1="82" y1="184" x2="306" y2="184"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#69eeff"></stop>
-                                <stop offset="38%" stop-color="#ffffff"></stop>
-                                <stop offset="72%" stop-color="#ff9df6"></stop>
-                                <stop offset="100%" stop-color="#16dcff"></stop>
-                            </linearGradient>
+                        </div>
 
-                            <linearGradient id="voice-ribbon-white" x1="88" y1="182" x2="300" y2="194"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0%" stop-color="#dcfdff"></stop>
-                                <stop offset="48%" stop-color="#ffffff"></stop>
-                                <stop offset="100%" stop-color="#d4fbff"></stop>
-                            </linearGradient>
-
-                            <radialGradient id="voice-tip-glow" cx="0%" cy="50%" r="76%">
-                                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"></stop>
-                                <stop offset="26%" stop-color="#b8f8ff" stop-opacity="0.90"></stop>
-                                <stop offset="58%" stop-color="#41ddff" stop-opacity="0.42"></stop>
-                                <stop offset="100%" stop-color="#41ddff" stop-opacity="0"></stop>
-                            </radialGradient>
-
-                            <filter id="voice-blur-large" x="-40%" y="-40%" width="180%" height="180%">
-                                <feGaussianBlur stdDeviation="12"></feGaussianBlur>
-                            </filter>
-
-                            <filter id="voice-blur-medium" x="-30%" y="-30%" width="160%" height="160%">
-                                <feGaussianBlur stdDeviation="6"></feGaussianBlur>
-                            </filter>
-                        </defs>
-
-                        <circle cx="180" cy="180" r="146" fill="url(#voice-orb-fill)"></circle>
-
-                        <circle cx="180" cy="180" r="146" fill="none" stroke="url(#voice-ring-gradient)" stroke-width="16"
-                            opacity="0.46" filter="url(#voice-blur-large)"></circle>
-
-                        <circle cx="180" cy="180" r="146" fill="none" stroke="url(#voice-ring-gradient)" stroke-width="8"
-                            opacity="0.92"></circle>
-
-                        <g clip-path="url(#voice-orb-clip)">
-                            <ellipse cx="80" cy="184" rx="34" ry="26" fill="url(#voice-tip-glow)"
-                                filter="url(#voice-blur-medium)" opacity="0.96"></ellipse>
-
-                            <path
-                                d="M72 184C112 134 149 102 188 108C220 112 240 142 243 178C246 215 223 250 186 263C148 276 106 248 72 184Z"
-                                fill="url(#voice-wave-pink)" opacity="0.84"></path>
-
-                            <path
-                                d="M72 184C108 171 142 173 174 190C207 208 229 242 251 270C266 289 288 286 310 238C301 210 282 192 256 186C227 180 196 189 166 214C132 243 104 258 84 244C72 235 68 214 72 184Z"
-                                fill="url(#voice-wave-cyan)" opacity="0.88"></path>
-
-                            <path
-                                d="M84 184C126 156 167 157 199 180C231 202 267 206 304 181"
-                                fill="none" stroke="url(#voice-ribbon-glow)" stroke-width="34"
-                                stroke-linecap="round" stroke-linejoin="round" opacity="0.74"
-                                filter="url(#voice-blur-medium)"></path>
-
-                            <path
-                                d="M88 184C128 160 168 161 199 182C229 201 263 204 300 183"
-                                fill="none" stroke="url(#voice-ribbon-white)" stroke-width="18"
-                                stroke-linecap="round" stroke-linejoin="round" opacity="0.98"></path>
-                        </g>
-                    </svg>
+                    </div>
 
                     <div class="orb-ring"></div>
 
                 </div>
 
-                <div id="voice-transcript"
-                    class="mt-10 text-center text-xl font-medium min-h-[32px] max-w-xl px-6">
+                <div id="voice-transcript" class="mt-10 text-center text-xl font-medium min-h-[32px] max-w-xl px-6">
                 </div>
 
             </div>

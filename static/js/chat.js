@@ -331,6 +331,82 @@ function startMic() {
 
     const recognition =
         new SpeechRecognition();
+    /* ================= VOICE REACTIVE ORB ================= */
+
+    let audioContext;
+    let analyser;
+    let microphone;
+    let dataArray;
+    let animationFrame;
+
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then((stream) => {
+
+            audioContext =
+                new (window.AudioContext || window.webkitAudioContext)();
+
+            analyser =
+                audioContext.createAnalyser();
+
+            microphone =
+                audioContext.createMediaStreamSource(stream);
+
+            analyser.fftSize = 256;
+
+            const bufferLength =
+                analyser.frequencyBinCount;
+
+            dataArray =
+                new Uint8Array(bufferLength);
+
+            microphone.connect(analyser);
+
+            const bars =
+                document.querySelectorAll(".voice-bar");
+
+            analyser.smoothingTimeConstant = 0.82;
+
+            analyser.fftSize = 32;
+
+            function animateOrb() {
+
+                analyser.getByteFrequencyData(dataArray);
+
+                const values =
+                    [...dataArray];
+
+                const mapped =
+                    [15, 10, 8, 9, 6, 5, 2, 1, 0, 4, 3, 7];
+
+                bars.forEach((bar, i) => {
+
+                    const value =
+                        values[mapped[i]] / 255;
+
+                    const scale =
+                        Math.max(0.28, value * 1.8);
+
+                    bar.style.transform =
+                        `scaleY(${scale})`;
+
+                    bar.style.opacity =
+                        Math.max(.25, value);
+
+                });
+
+                animationFrame =
+                    requestAnimationFrame(animateOrb);
+
+            }
+
+            animateOrb();
+
+        })
+        .catch((err) => {
+
+            console.error(err);
+
+        });
 
     recognition.lang = "en-US";
 
@@ -385,6 +461,8 @@ function startMic() {
     };
 
     recognition.onend = () => {
+
+        cancelAnimationFrame(animationFrame);
 
         console.log("🛑 Recognition ended");
 
