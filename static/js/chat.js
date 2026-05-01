@@ -331,16 +331,38 @@ function startMic() {
 
     const recognition =
         new SpeechRecognition();
-    /* ================= VOICE REACTIVE ORB ================= */
 
     let audioContext;
     let analyser;
     let microphone;
     let dataArray;
     let animationFrame;
+    let audioStream = null;
+
+    function cleanupMic() {
+        if (animationFrame) {
+            cancelAnimationFrame(animationFrame);
+            animationFrame = null;
+        }
+
+        if (audioStream) {
+            audioStream.getTracks().forEach((track) => track.stop());
+            audioStream = null;
+        }
+
+        micBtn.classList.remove(
+            "mic-listening"
+        );
+        voicePopup.classList.add("hidden");
+        voicePopup.classList.remove("flex");
+        voiceTranscript.innerHTML = "";
+        input.placeholder =
+            "Ask anything about Ashish...";
+    }
 
     navigator.mediaDevices.getUserMedia({ audio: true })
         .then((stream) => {
+            audioStream = stream;
 
             audioContext =
                 new (window.AudioContext || window.webkitAudioContext)();
@@ -458,23 +480,15 @@ function startMic() {
             event.error
         );
 
+        cleanupMic();
+
     };
 
     recognition.onend = () => {
 
-        cancelAnimationFrame(animationFrame);
+        cleanupMic();
 
         console.log("🛑 Recognition ended");
-
-        micBtn.classList.remove(
-            "mic-listening"
-        );
-        voicePopup.classList.add("hidden");
-        voicePopup.classList.remove("flex");
-        voiceTranscript.innerHTML = "";
-
-        input.placeholder =
-            "Ask anything about Ashish...";
 
         if (finalTranscript.trim()) {
 
