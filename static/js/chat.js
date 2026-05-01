@@ -178,10 +178,20 @@ async function typeAIMessage(text, audioUrl = null) {
 
     const interval = setInterval(() => {
 
-        textElement.innerHTML =
-            marked.parse(
-                text.substring(0, index)
-            );
+        const currentText =
+            text.substring(0, index);
+
+        /* HIDE RAW MARKDOWN DURING TYPING */
+
+        const cleanedText =
+            currentText
+                .replace(/\*\*/g, "")
+                .replace(/\*/g, "")
+                .replace(/#/g, "")
+                .replace(/`/g, "");
+
+        textElement.textContent =
+            cleanedText;
 
         index++;
 
@@ -207,7 +217,7 @@ function typeText(element, text) {
 
         if (index < text.length) {
 
-            element.innerHTML += text.charAt(index);
+            element.textContent += text.charAt(index);
 
             index++;
 
